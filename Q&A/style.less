@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #282c35;
+}
+h2 {
+  position: relative;
+  top: 3vh;
+  left: 10vw;
+  color: #69d6fb;
+}
+@keyframes expand {
+  from {
+    color: rgba(128, 128, 128, 0);
+  }
+  to {
+    color: rgba(128, 128, 128, 100);
+    background-color: white;
+  }
+}
+#container {
+  background-color: white;
+  width: 65vw;
+  height: auto;
+  margin: 8vh auto;
+  padding: 0.5vh 1vw;
+  border: 5px solid white;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  .title {
+    &_unclick {
+      background-color: #012fa7;
+      color: white;
+      height: 2em;
+      margin: 10px auto;
+      padding: 3px 0 0 0;
+      border: 2px solid black;
+      border-radius: 8px;
+    }
+    &_expand {
+      margin: 10px auto;
+      padding: 3px 0 0 0;
+      background-color: white;
+      border: 2px solid black;
+      border-radius: 8px;
+      height: 10em;
+      transition: height 1s;
+      .content {
+        animation: expand 1s;
+        margin: 2em auto;
+        font-weight: normal;
+      }
+    }
+    &_clicked {
+      transition: height 1s;
+      margin: 10px auto;
+      padding: 3px 0 0 0;
+      height: 2em;
+      border: 2px solid black;
+      border-radius: 8px;
+      background-color: gray;
+    }
+  }
+}

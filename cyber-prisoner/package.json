@@ -1,0 +1,15 @@
+{
+  "name": "cyber-prisoner",
+  "version": "1.0.0",
+  "description": "真的很想写...但是没时间了~~捏~~~。如果进了潮，个人比较像负责前端的东西，但也很乐意写写后端",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "node-dev": "^7.4.3"
+  }
+}

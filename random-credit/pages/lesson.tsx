@@ -54,6 +54,7 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
   
 
 export default function Lesson() {
+  axios.defaults.withCredentials=true
   const [open, setOpen] = useState(false);
   const handleOpen = () => {
     setOpen(true);
@@ -72,7 +73,7 @@ export default function Lesson() {
             setRows(res.data.data);
         })
         .catch(err => {
-            console.log(err)
+            console.log('1')
         });
   },[]);
 
@@ -87,7 +88,8 @@ export default function Lesson() {
     })
         .catch(err => {
             // alert('登录已过期~即将回到登陆页面');
-            handleOpen();
+            setInterval(handleOpen,3000);
+            
             // window.location='http://localhost:3000/'as string&Location;
         });
   };
@@ -105,6 +107,7 @@ export default function Lesson() {
       setOpen(false);
     };
   const tiaozhuan =()=>{
+    localStorage.removeItem('cookie');
     window.location='http://localhost:3000/'as string&Location;
   }
     return (

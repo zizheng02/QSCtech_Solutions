@@ -27,10 +27,6 @@ const style = {
 };
 
 export default function SignIn() {
-  axios.get('http://localhost:9999/login')
-  .then(function (response) {
-    window.location='http://localhost:3000/lesson'as string&Location;
-  })
   const [open, setOpen] = React.useState(false);
   const [hyc,setHyc] = React.useState('');
   const handleOpen = () => {
